@@ -1,7 +1,7 @@
 import unittest
-from unittest.mock import MagicMock
-from tests.fixtures.mock import Mock
-from airportchallenge.airport import Airport
+from unittest.mock import MagicMock # MagicMock allows stubbing of methods onto real classes
+from tests.fixtures.mock import Mock # import fake Mock class from PROJECT/tests/fixtures/mock.py
+from airportchallenge.airport import Airport # PROJECT/airportchallenge/airport.py
 
 class TestAirport(unittest.TestCase):
 
