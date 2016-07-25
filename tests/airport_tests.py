@@ -1,5 +1,6 @@
 import unittest
 from unittest.mock import MagicMock
+from tests.fixtures.mock import Mock
 from airportchallenge.airport import Airport
 
 class TestAirport(unittest.TestCase):
@@ -46,8 +47,3 @@ class TestAirport(unittest.TestCase):
         self.weather.is_stormy = MagicMock(return_value=True)
         self.assertRaises(RuntimeError, lambda x: self.airport.takeoff(self.plane), "Plane can't takeoff in stormy weather.")
         self.assertEqual(self.airport.planes, [self.plane])
-
-class Mock(object):
-
-    def __init__(self):
-        pass
